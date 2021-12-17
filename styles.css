@@ -1,3 +1,37 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.contents {
+    
+}
+
+.win {
+    visibility: hidden;
+    
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 800;
+    color: red;
+
+    font-size: 48px;
+
+    text-align: center;
+    padding-top: 225px;
+
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    width: 600px;
+    height: 300px;
+    
+}
+
 .opponent {
     display: flex;
     flex-direction: row;
@@ -22,6 +56,8 @@
 .reset {
     display: flex;
     justify-content: center;
+
+    padding-top: 100px;
 }
 
 .reset > .resetBtn {

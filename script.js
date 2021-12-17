@@ -4,12 +4,6 @@ let turn = true;
 let count = 0;
 
 const gameBoard = (() => {
-    // const human = document.querySelector('.human');
-    // const computer = document.querySelector('.computer');
-
-    // human.addEventListener('click', () => {
-        
-    // })
 
     const resetBtn = document.querySelector('.resetBtn');
     resetBtn.addEventListener('click', () => {
@@ -23,6 +17,8 @@ const gameBoard = (() => {
         }
         turn = true;
         count = 0;
+        document.querySelector('.win').style.display = 'none';
+        
     });
 
     const initBoard = () => {
@@ -110,8 +106,10 @@ const move = (e) => {
             endGame();
         }
 
-        if (count == 8) {
-            endGame();
+        if (count >= 8) {
+            document.querySelector('.win').style.visibility = 'visible';
+            document.querySelector('.win').style.backdropFilter= 'blur(10px)';
+            document.querySelector('.win').textContent = `Nobody f@$#&^* wins`;
         }
 
         //Next player turn
@@ -218,7 +216,14 @@ const check = () => {
 }
 
 const endGame = () => {
-    alert(`Game over bro... ${check()} has won`)
+    // alert(`Game over bro... ${check()} has won`);
+    // document.querySelector('.win').style.cssText = `
+    //     visibility: visible;
+    //     backdrop-filter: blur(5px) brightness(60%) contrast(80%);
+    // `;
+    document.querySelector('.win').style.visibility = 'visible';
+    document.querySelector('.win').style.backdropFilter= 'blur(10px)';
+    document.querySelector('.win').textContent = `${check()} has won`;
 }
 
 contents.appendChild(gameBoard.initBoard());
