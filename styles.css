@@ -1,0 +1,32 @@
+.opponent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+}
+
+.human {
+    font-size: 36px;
+    background-color: aquamarine;
+    width: auto; 
+    justify-content: center; 
+}
+
+.computer {
+    font-size: 36px;
+    background-color: aquamarine;
+    width: auto; 
+    justify-content: center; 
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+}
+
+.reset > .resetBtn {
+    width: 150px;
+    height: 36px;
+
+    font-size: 24px;
+}
